@@ -70,3 +70,13 @@
 # Mongoose has to purposes
     #Methods Find arguement
 
+
+    atlas password 7fYA8S4rO8mJNVzg
+
+# Mongoose Schemas 
+    * Blueprints for out data
+
+# Mongoose Models
+    * Modoels have a Name, and a Blueprint (Schema)
+    * Models are used to perform the CRUD operations on data created with the Model
+

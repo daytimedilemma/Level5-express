@@ -4,6 +4,7 @@ const morgan = require("morgan")
 const mongoose = require("mongoose")
 
 
+require("dotenv").config()
 
 //Middleware (for every request) //
 app.use(express.json()) // Looks for a request body, and turns it into "req.body"
@@ -14,7 +15,7 @@ app.use(express.json()) // Looks for a request body, and turns it into "req.body
 app.use(morgan("dev")) //Logs Requests to the console.
 
 //connect to database
-mongoose.connect("mongodb://localhost:27017/moviesdb", () => console.log("connected to database")) //whatever is after the 27017/ is the name of the database
+mongoose.connect(`mongodb+srv://nickaminer94:${process.env.ATLAS_PASSWORD}@cluster0.oagvemx.mongodb.net/?retryWrites=true&w=majority`, () => console.log("connected to database")) //whatever is after the 27017/ is the name of the database
 
 
 app.use("/movies", require("./routes/movieRouter"))
